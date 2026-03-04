@@ -6,96 +6,41 @@
   <title>MOHAMMED AZHAR K.K | Senior Flutter Developer</title>
   <style>
     :root {
-      --bg: #040818;
+      --bg: #0b1020;
+      --surface: #121a32;
       --text: #e9eefc;
       --muted: #a8b3d1;
       --accent: #6ea8fe;
-      --card: rgba(19, 30, 62, 0.78);
-      --chip: rgba(29, 42, 79, 0.9);
-      --line: rgba(101, 132, 214, 0.3);
+      --card: #151f3b;
+      --chip: #1d2a4f;
+      --line: #2a3968;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #18284f 0%, var(--bg) 40%);
       color: var(--text);
-      background: radial-gradient(circle at 75% 0%, #152650 0%, var(--bg) 45%);
       line-height: 1.6;
-      overflow-x: hidden;
-      min-height: 100vh;
     }
-
-    #three-bg {
-      position: fixed;
-      inset: 0;
-      z-index: -3;
-      pointer-events: none;
-      opacity: 0.85;
-    }
-
-    .ambient {
-      position: fixed;
-      width: 420px;
-      height: 420px;
-      border-radius: 999px;
-      filter: blur(70px);
-      pointer-events: none;
-      z-index: -2;
-      opacity: 0.2;
-    }
-
-    .ambient.one { background: #4d80ff; top: -140px; left: -130px; }
-    .ambient.two { background: #67d1ff; top: 28%; right: -180px; }
-    .ambient.three { background: #5578ff; bottom: -180px; left: 25%; }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 42px 20px 72px;
-      position: relative;
-      z-index: 1;
-    }
-
-    h1, h2, h3 { margin: 0 0 12px; line-height: 1.2; }
-    h1 { font-size: clamp(1.9rem, 3vw, 2.9rem); letter-spacing: 0.02em; }
-    h2 { font-size: 1.27rem; color: #d7e2ff; margin-bottom: 12px; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1,h2,h3 { margin: 0 0 12px; line-height: 1.2; }
+    h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+    h2 { font-size: 1.25rem; color: #d7e2ff; margin-bottom: 10px; }
     p { margin: 0 0 12px; color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
-
-    .hero,
-    .card {
-      background: var(--card);
+    .hero {
+      background: linear-gradient(140deg, rgba(110,168,254,.12), rgba(110,168,254,.03));
       border: 1px solid var(--line);
       border-radius: 18px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(8, 18, 40, 0.45);
+      padding: 28px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(4px);
     }
-
-    .hero {
-      padding: 30px;
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -80px;
-      top: -80px;
-      background: radial-gradient(circle, rgba(119, 175, 255, 0.35), transparent 65%);
-      pointer-events: none;
-    }
-
-    .title { color: #c0d1ff; font-weight: 600; margin-bottom: 10px; }
-
+    .title { color: #b9cbff; font-weight: 600; margin-bottom: 10px; }
     .contact {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 10px 20px;
       margin-top: 16px;
       font-size: 0.95rem;
@@ -106,15 +51,14 @@
       grid-template-columns: 1.1fr .9fr;
       gap: 22px;
     }
-
     .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
       padding: 22px;
       margin-bottom: 20px;
-      transform-style: preserve-3d;
     }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
-
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .chip {
       background: var(--chip);
       border: 1px solid var(--line);
@@ -122,10 +66,7 @@
       border-radius: 999px;
       padding: 6px 12px;
       font-size: 0.84rem;
-      transition: transform .2s ease;
-      will-change: transform;
     }
-
     .timeline-item { margin-bottom: 18px; }
     .timeline-item h3 { font-size: 1.02rem; color: #e4ecff; margin-bottom: 5px; }
     .meta { font-size: .87rem; color: #9cb0e0; margin-bottom: 7px; }
@@ -133,21 +74,12 @@
     li { margin-bottom: 8px; color: var(--muted); }
     .project { margin-bottom: 14px; }
     .project strong { color: #dce6ff; }
-
-    @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
-      .ambient { display: none; }
-    }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <canvas id="three-bg" aria-hidden="true"></canvas>
-  <div class="ambient one"></div>
-  <div class="ambient two"></div>
-  <div class="ambient three"></div>
-
   <main class="container">
-    <section class="hero reveal">
+    <section class="hero">
       <h1>MOHAMMED AZHAR K.K</h1>
       <div class="title">Senior Flutter Developer</div>
       <p>Senior Flutter Developer with strong experience in designing, developing, and maintaining production-grade Android/iOS apps. Skilled in Clean Architecture, MVVM, API integration, performance optimization, and reliable production releases.</p>
@@ -162,7 +94,7 @@
 
     <div class="grid">
       <section>
-        <article class="card reveal tilt-card">
+        <article class="card">
           <h2>Professional Experience</h2>
           <div class="timeline-item">
             <h3>Senior Flutter Developer — Brandstrek Coders LLP</h3>
@@ -197,7 +129,7 @@
           </div>
         </article>
 
-        <article class="card reveal tilt-card">
+        <article class="card">
           <h2>Key Projects</h2>
           <div class="project"><strong>WorkHex</strong> — SaaS CRM/HRM/Project platform with attendance + geolocation and team workflows.</div>
           <div class="project"><strong>Kool Mindz</strong> — 18K+ downloads first month; strong active-user retention with optimized UI/UX.</div>
@@ -210,7 +142,7 @@
       </section>
 
       <aside>
-        <article class="card reveal tilt-card">
+        <article class="card">
           <h2>Technical Skills</h2>
           <div class="chips">
             <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Riverpod</span>
@@ -221,7 +153,7 @@
           </div>
         </article>
 
-        <article class="card reveal tilt-card">
+        <article class="card">
           <h2>Education</h2>
           <ul>
             <li>Bachelor of Arts in English — Kerala University</li>
@@ -229,7 +161,7 @@
           </ul>
         </article>
 
-        <article class="card reveal tilt-card">
+        <article class="card">
           <h2>Certifications</h2>
           <ul>
             <li>Flutter Full-Stack Developer — Udemy</li>
@@ -242,115 +174,5 @@
       </aside>
     </div>
   </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.min.js"></script>
-  <script>
-    if (window.gsap) {
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.from('.hero h1, .hero .title, .hero p, .hero .contact > div', {
-        y: 24,
-        opacity: 0,
-        stagger: 0.08,
-        duration: 0.9,
-        ease: 'power3.out'
-      });
-
-      gsap.utils.toArray('.reveal').forEach((el, i) => {
-        gsap.from(el, {
-          scrollTrigger: { trigger: el, start: 'top 86%' },
-          y: 32,
-          opacity: 0,
-          duration: 0.9,
-          delay: i * 0.04,
-          ease: 'power2.out'
-        });
-      });
-
-      gsap.to('.ambient.one', { x: 80, y: 50, duration: 8, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.ambient.two', { x: -70, y: -35, duration: 9, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.ambient.three', { x: 60, y: -45, duration: 10, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-
-      gsap.utils.toArray('.chip').forEach((chip, i) => {
-        gsap.from(chip, {
-          scrollTrigger: { trigger: chip, start: 'top 92%' },
-          opacity: 0,
-          y: 10,
-          scale: 0.95,
-          duration: 0.45,
-          delay: i * 0.03,
-          ease: 'back.out(1.7)'
-        });
-      });
-    }
-
-    document.querySelectorAll('.tilt-card').forEach((card) => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const rotateY = ((e.clientX - cx) / rect.width) * 5;
-        const rotateX = ((cy - e.clientY) / rect.height) * 5;
-        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
-      });
-    });
-
-    (function initThreeBackground() {
-      if (!window.THREE) return;
-
-      const canvas = document.getElementById('three-bg');
-      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 38;
-
-      const starsGeometry = new THREE.BufferGeometry();
-      const starsCount = 1400;
-      const positions = new Float32Array(starsCount * 3);
-
-      for (let i = 0; i < starsCount * 3; i += 3) {
-        positions[i] = (Math.random() - 0.5) * 180;
-        positions[i + 1] = (Math.random() - 0.5) * 130;
-        positions[i + 2] = (Math.random() - 0.5) * 140;
-      }
-
-      starsGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      const starsMaterial = new THREE.PointsMaterial({ color: 0x8fb5ff, size: 0.38, transparent: true, opacity: 0.75 });
-      const starField = new THREE.Points(starsGeometry, starsMaterial);
-      scene.add(starField);
-
-      function resize() {
-        const w = window.innerWidth;
-        const h = window.innerHeight;
-        renderer.setSize(w, h, false);
-        camera.aspect = w / h;
-        camera.updateProjectionMatrix();
-      }
-
-      resize();
-      window.addEventListener('resize', resize);
-
-      function animate() {
-        requestAnimationFrame(animate);
-        starField.rotation.y += 0.00045;
-        starField.rotation.x += 0.0002;
-        renderer.render(scene, camera);
-      }
-
-      animate();
-
-      document.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 0.2;
-        const y = (e.clientY / window.innerHeight - 0.5) * 0.2;
-        gsap.to(starField.rotation, { y: x, x: y, duration: 1.4, overwrite: true, ease: 'power2.out' });
-      });
-    })();
-  </script>
 </body>
 </html>
