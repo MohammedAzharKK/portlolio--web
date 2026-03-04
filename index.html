@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOHAMMED AZHAR K.K | Senior Flutter Developer</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #121a32;
+      --text: #e9eefc;
+      --muted: #a8b3d1;
+      --accent: #6ea8fe;
+      --card: #151f3b;
+      --chip: #1d2a4f;
+      --line: #2a3968;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #18284f 0%, var(--bg) 40%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 40px 20px 64px; }
+    h1,h2,h3 { margin: 0 0 12px; line-height: 1.2; }
+    h1 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+    h2 { font-size: 1.25rem; color: #d7e2ff; margin-bottom: 10px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    .hero {
+      background: linear-gradient(140deg, rgba(110,168,254,.12), rgba(110,168,254,.03));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(4px);
+    }
+    .title { color: #b9cbff; font-weight: 600; margin-bottom: 10px; }
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px 20px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 20px;
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      background: var(--chip);
+      border: 1px solid var(--line);
+      color: #c9d6ff;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.84rem;
+    }
+    .timeline-item { margin-bottom: 18px; }
+    .timeline-item h3 { font-size: 1.02rem; color: #e4ecff; margin-bottom: 5px; }
+    .meta { font-size: .87rem; color: #9cb0e0; margin-bottom: 7px; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin-bottom: 8px; color: var(--muted); }
+    .project { margin-bottom: 14px; }
+    .project strong { color: #dce6ff; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <h1>MOHAMMED AZHAR K.K</h1>
+      <div class="title">Senior Flutter Developer</div>
+      <p>Senior Flutter Developer with strong experience in designing, developing, and maintaining production-grade Android/iOS apps. Skilled in Clean Architecture, MVVM, API integration, performance optimization, and reliable production releases.</p>
+      <div class="contact">
+        <div><strong>Phone:</strong> <a href="tel:+916238912548">+91 62389 12548</a></div>
+        <div><strong>Email:</strong> <a href="mailto:azhar@example.com">azhar@example.com</a></div>
+        <div><strong>Location:</strong> Kozhikode, Kerala, India</div>
+        <div><strong>LinkedIn:</strong> <a href="#">LinkedIn</a></div>
+        <div><strong>GitHub:</strong> <a href="#">Github</a></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section>
+        <article class="card">
+          <h2>Professional Experience</h2>
+          <div class="timeline-item">
+            <h3>Senior Flutter Developer — Brandstrek Coders LLP</h3>
+            <div class="meta">07/2025 – Present</div>
+            <ul>
+              <li>Led end-to-end design, development, and release of cross-platform Flutter apps.</li>
+              <li>Managed Play Store/App Store signing, provisioning, and release cycles.</li>
+              <li>Improved performance using Flutter DevTools to reduce jank and memory issues.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Project Manager (Part-time) — Bragtly</h3>
+            <div class="meta">08/2025 – Present</div>
+            <ul>
+              <li>Led lifecycle from requirements to production deployment.</li>
+              <li>Coordinated mobile, backend, QA, and design teams.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Flutter Developer — Green Creon LLP</h3>
+            <div class="meta">09/2024 – 08/2025</div>
+            <ul>
+              <li>Contributed to 9 live production applications across Android and iOS.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <h3>Full-Stack Flutter Developer — LevelX</h3>
+            <div class="meta">11/2023 – 09/2024</div>
+            <ul>
+              <li>Built high-performance Flutter applications with direct API integration.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Key Projects</h2>
+          <div class="project"><strong>WorkHex</strong> — SaaS CRM/HRM/Project platform with attendance + geolocation and team workflows.</div>
+          <div class="project"><strong>Kool Mindz</strong> — 18K+ downloads first month; strong active-user retention with optimized UI/UX.</div>
+          <div class="project"><strong>Go Gully</strong> — Shopify-based e-commerce app with multi-variant product mapping and PostgreSQL sync.</div>
+          <div class="project"><strong>Rajakumari Scheme</strong> — Fintech digital gold app with MVVM, Riverpod, and secure PhonePe integration.</div>
+          <div class="project"><strong>Moona Delivery</strong> — Shopify integrated app for Android and iOS with secure transaction pipelines.</div>
+          <div class="project"><strong>Ecom (ongoing)</strong> — Multi-tenant white-label eCommerce SaaS with modular architecture.</div>
+          <div class="project"><strong>Neo carz</strong> — AI-powered damage detection with real-time camera/object validation.</div>
+        </article>
+      </section>
+
+      <aside>
+        <article class="card">
+          <h2>Technical Skills</h2>
+          <div class="chips">
+            <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Riverpod</span>
+            <span class="chip">Bloc</span><span class="chip">Provider</span><span class="chip">GetX</span>
+            <span class="chip">Clean Architecture</span><span class="chip">MVVM</span><span class="chip">REST API</span>
+            <span class="chip">Firebase</span><span class="chip">FCM</span><span class="chip">PostgreSQL</span>
+            <span class="chip">GitHub Actions</span><span class="chip">Jenkins</span><span class="chip">Swift/Kotlin</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Education</h2>
+          <ul>
+            <li>Bachelor of Arts in English — Kerala University</li>
+            <li>Diploma in Logistics & Supply Chain Management — CCEK</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Certifications</h2>
+          <ul>
+            <li>Flutter Full-Stack Developer — Udemy</li>
+            <li>ScrumMaster — Udemy</li>
+            <li>Advanced State Management in Flutter — Coursera/Udemy</li>
+            <li>iOS & Swift Bootcamp — Udemy</li>
+            <li>Android 14 & Kotlin Masterclass — Udemy</li>
+          </ul>
+        </article>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
